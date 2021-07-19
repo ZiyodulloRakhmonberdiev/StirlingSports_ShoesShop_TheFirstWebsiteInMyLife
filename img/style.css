@@ -1,0 +1,785 @@
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  font-family: 'Oswald', sans-serif;
+}
+body {
+  max-width: 1360px;
+}
+section {
+  padding: 20px 50px;
+}
+.nav {
+  background: #171717;
+  position: relative;
+  justify-content: start;
+  display: flex;
+  align-items: center;
+}
+.nav .logo {
+  width: 15%;
+}
+.nav .logo a {
+  justify-content: start;
+  display: flex;
+  text-decoration: none;
+}
+.nav .logo a .logo-title {
+  color: #ffffff;
+  font-size: 20px;
+}
+.nav .logo a .logo-img {
+  width: 15px;
+  height: 15px;
+}
+.nav .logo a .logo-img img {
+  width: 15px;
+  height: 15px;
+  margin-left: 5px;
+  margin-top: 5px;
+}
+.nav .navigator {
+  width: 30%;
+  position: relative;
+  display: flex;
+}
+.nav .navigator a {
+  color: #a6a6a6;
+  margin-left: 10px;
+  font-size: 12px;
+  text-decoration: none;
+  transition: .2s ease;
+}
+.nav .navigator a:hover {
+  color: #ffffff;
+  transform: scale(1.1);
+}
+.nav .search {
+  margin-left: 170px;
+  width: 30%;
+  justify-content: space-between;
+}
+.nav .search input {
+  width: 90%;
+  background: none;
+  color: #444444;
+  border: 0;
+}
+.nav .search input:hover {
+  color: #fff;
+}
+.nav .user {
+  width: 10%;
+}
+.nav .cart {
+  align-items: center;
+  width: 10%;
+  height: 30px;
+  border-radius: 30px;
+  background: #19ce96;
+  justify-content: center;
+  display: flex;
+  line-height: 30px;
+  transition: .4s ease;
+}
+.nav .cart:hover {
+  background: #19ff96;
+}
+.nav .cart a {
+  height: 30px;
+  text-align: center;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+}
+.nav .cart a i {
+  color: #ffffff;
+  font-size: 16px;
+}
+.nav .cart a input {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #000;
+  color: #ffffff;
+  text-align: center;
+  font-size: 10px;
+  position: relative;
+  top: -2px;
+  left: 4px;
+  border: 0;
+}
+.nav .btn {
+  display: none;
+}
+.header {
+  background: #000;
+  padding: 50px;
+  justify-content: space-between;
+  display: flex;
+}
+.header .name {
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  width: 30%;
+}
+.header .name a {
+  text-decoration: none;
+}
+.header .name a h2 {
+  color: #ffffff;
+  font-size: 30px;
+  margin-top: 10px;
+}
+.header .name a h3 {
+  font-size: 24px;
+  color: #19ce96;
+  margin-top: 20px;
+}
+.header .size {
+  width: 25%;
+  flex-wrap: wrap;
+  justify-content: start;
+  display: flex;
+}
+.header .size .title {
+  justify-content: space-between;
+  display: flex;
+}
+.header .size .title h2 {
+  color: #ffffff;
+  font-size: 12px;
+}
+.header .size .title h3 {
+  color: #19ce96;
+  font-size: 10px;
+  align-items: center;
+  margin-left: 45px;
+  margin-top: 2px;
+}
+.header .size .input {
+  width: 100%;
+  margin: 10px 0;
+}
+.header .size .input input {
+  background: #444444;
+  border: 0;
+  font-size: 9px;
+  text-align: center;
+  width: 35px;
+  height: 35px;
+  color: #aaaaaa;
+  margin: 2px 0px;
+  transition: .4s ease;
+}
+.header .size .input input:hover {
+  background: #4454;
+  color: #ffffff;
+  cursor: pointer;
+}
+.header .size .btn {
+  background: #19ce96;
+  width: 200px;
+  height: 40px;
+  border-radius: 30px;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  transition: .4s ease;
+}
+.header .size .btn:hover {
+  background: #19ff96;
+}
+.header .size .btn a {
+  text-decoration: none;
+  width: 100%;
+  font-weight: 700;
+  font-size: 12px;
+  color: #000;
+  text-align: center;
+}
+.content {
+  position: relative;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 100px 50px 50px 50px;
+}
+.content .card {
+  flex-wrap: wrap;
+  width: 25%;
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+  margin-right: 30px;
+}
+.content .card .title {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+.content .card .card-text {
+  padding: 15px 60px 20px 0px;
+  font-family: monospace;
+}
+.content .card p {
+  font-size: 14px;
+  color: #aaa;
+}
+.content .input {
+  flex-wrap: wrap;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+}
+.content .input ul {
+  flex-direction: column;
+}
+.content .input ul li {
+  flex-direction: row;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  border-bottom: 1px solid #aaa;
+  height: 30px;
+  color: #222;
+}
+.content .input ul li .inp {
+  float: right;
+}
+.content .input ul li .inp input {
+  overflow: hidden;
+  margin-left: 10px;
+  background: #19ce96;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 0;
+  cursor: pointer;
+}
+.content .input ul .fit .i6,
+.content .input ul .fit .i7,
+.content .input ul .fit .i8 {
+  background: #aaa;
+}
+.content .input ul .size .i7,
+.content .input ul .size .i8 {
+  background: #aaa;
+}
+.content .input ul .dur .i6,
+.content .input ul .dur .i7,
+.content .input ul .dur .i8 {
+  background: #aaa;
+}
+.content .input ul .com .i8 {
+  background: #aaa;
+}
+.content .shirt {
+  position: relative;
+  width: 25%;
+  margin-left: 120px;
+  flex-wrap: wrap;
+}
+.content .shirt .content {
+  float: left;
+  justify-content: start;
+  position: relative;
+  top: -80px;
+  left: -100px;
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+}
+.content .shirt .img {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+}
+.content .shirt .img img {
+  width: 80px;
+}
+.content .shirt .about {
+  position: relative;
+  flex-direction: column;
+  width: 50%;
+}
+.content .shirt .about h2 {
+  font-size: 14px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.content .shirt .about h3 {
+  font-size: 11px;
+}
+.customer {
+  padding: 0px 0px;
+  background: #F2F2F2;
+}
+.customer .title {
+  flex-direction: row;
+  justify-content: space-between;
+  display: flex;
+}
+.customer .title h2 {
+  font-size: 16px;
+  /* margin-bottom: 10px; */
+  flex-direction: column;
+  width: 50%;
+}
+.customer .title button {
+  font-size: 15px;
+  border: 2px solid #111;
+  border-radius: 40px;
+  width: 15%;
+  line-height: 40px;
+  text-align: center;
+  height: 45px;
+  transition: .4s ease;
+}
+.customer .title button:hover {
+  background: #000;
+  color: #fff;
+}
+.customer .content {
+  justify-content: center;
+  flex-direction: row;
+  margin: 0;
+  display: flex;
+}
+.customer .content .col {
+  background: #ffffff;
+  margin: 20px;
+  padding: 30px;
+  flex-direction: column;
+  width: 20%;
+  margin-right: 25px;
+}
+.customer .content .col .card-text {
+  color: #444;
+  font-size: 14px;
+  font-family: sans-serif, monospace;
+  width: 100%;
+  justify-content: start;
+  display: flex;
+  margin-bottom: 15px;
+}
+.customer .content .col .card-title {
+  font-family: sans-serif, monospace;
+  font-size: 15px;
+}
+.customer .savdo {
+  flex-direction: column;
+  padding: 20px;
+  justify-content: center;
+  flex-direction: row;
+  margin: 0;
+  display: flex;
+}
+.customer .savdo .title {
+  width: 100%;
+  flex-direction: row;
+}
+.customer .savdo .col {
+  background: #ffffff;
+  margin: 20px;
+  padding: 30px;
+  flex-direction: column;
+  width: 20%;
+  margin-right: 25px;
+}
+.customer .savdo .col .card-text {
+  color: #444;
+  font-size: 14px;
+  font-family: sans-serif, monospace;
+  width: 100%;
+  justify-content: start;
+  display: flex;
+  margin-bottom: 15px;
+}
+.customer .savdo .col .card-title {
+  font-family: sans-serif, monospace;
+  font-size: 15px;
+}
+.savdo {
+  flex-direction: column;
+  padding: 100px;
+}
+.savdo .title {
+  flex-direction: row;
+}
+.savdo .title h2 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  flex-direction: column;
+  width: 100%;
+}
+.savdo .content {
+  flex-direction: row;
+  width: 100%;
+  justify-content: start;
+  display: flex;
+}
+.savdo .content .blok {
+  width: 20%;
+  flex-direction: column;
+  padding: 20px;
+}
+.savdo .content .blok img {
+  width: 200px;
+}
+.savdo .content .blok h2 {
+  font-size: 14px;
+  margin-top: 40px;
+  margin-bottom: 10px;
+  font-family: sans-serif;
+}
+.savdo .content .blok h3 {
+  font-size: 14px;
+}
+.savdo .content .b2 {
+  margin-top: 12px;
+}
+.savdo .content .b2 h2 {
+  margin-top: 45px;
+}
+.savdo .content .b1 {
+  margin-top: -25px;
+}
+.savdo .content .b1 img {
+  width: 200px;
+  object-fit: cover;
+}
+.footer {
+  flex-direction: column;
+  padding: 30px 100px;
+  background: #000;
+  font-family: sans-serif;
+}
+.footer .content {
+  flex-direction: row;
+  justify-content: space-between;
+  display: flex;
+  font-style: normal;
+}
+.footer .content .blok {
+  width: 20%;
+}
+.footer .content .blok .title {
+  margin-bottom: 20px;
+}
+.footer .content .blok .title h2 {
+  color: #19ce96;
+  font-size: 15px;
+  cursor: auto;
+}
+.footer .content .blok .contact a {
+  text-decoration: none;
+  font-size: 14px;
+  color: #a6a6a6;
+  transition: .4s ease;
+}
+.footer .content .blok .contact a:hover {
+  color: #ffffff;
+  transform: scale(0.3);
+}
+.footer .content .blok .contact .media-icons a {
+  margin-right: 10px;
+  font-size: 20px;
+}
+.footer .copyright {
+  margin-top: 40px;
+  justify-content: start;
+}
+.footer .copyright p {
+  font-size: 15px;
+  color: #444444;
+}
+@media (max-width: 992px) {
+  .nav {
+    padding: 50px;
+  }
+  .nav .logo {
+    width: 50%;
+    margin-right: 0;
+  }
+  .nav .navigator {
+    display: none;
+  }
+  .nav .search {
+    margin-left: 20px;
+    width: 300px;
+  }
+  .nav .search input {
+    width: 100%;
+  }
+  .nav .cart {
+    width: 150px;
+  }
+  .nav .btn {
+    display: block;
+    float: left;
+  }
+  .content {
+    flex-wrap: wrap;
+    padding: 50px;
+  }
+  .content .card {
+    width: 50%;
+  }
+  .content .card .card-text {
+    width: 100%;
+    flex-direction: column;
+  }
+  .content .input {
+    width: 100%;
+  }
+  .content .shirt {
+    position: relative;
+    width: 80%;
+    margin-top: 40px;
+  }
+  .customer {
+    padding: 50px;
+  }
+  .customer .title h2 {
+    width: 50%;
+  }
+  .customer .title button {
+    width: 30%;
+  }
+  .customer .content {
+    padding: 20px;
+    justify-content: center;
+    display: flex;
+  }
+  .customer .content .col {
+    width: 33.3333%;
+    margin: 20px;
+  }
+  .savdo {
+    padding: 50px;
+    flex-direction: column;
+    display: flex;
+  }
+  .savdo .title {
+    width: 100%;
+  }
+  .savdo .content {
+    justify-content: center;
+    flex-direction: row;
+  }
+  .savdo .content .b1,
+  .savdo .content .b2,
+  .savdo .content .b3,
+  .savdo .content .b4 {
+    width: 40%;
+    flex-direction: column;
+  }
+  .footer {
+    padding: 25px 50px;
+  }
+  .footer .content {
+    flex-direction: row;
+  }
+  .footer .content .blok {
+    width: 20%;
+  }
+}
+@media (max-width: 768px) {
+  .nav {
+    padding: 30px;
+  }
+  .nav .logo {
+    width: 70%;
+    margin-right: 0;
+  }
+  .nav .logo .logo-title {
+    font-size: 10px;
+  }
+  .nav .navigator {
+    display: none;
+  }
+  .nav .search {
+    margin-left: 20px;
+    width: 300px;
+  }
+  .nav .search input {
+    width: 40%;
+  }
+  .nav .cart {
+    width: 150px;
+  }
+  .nav .btn {
+    display: block;
+    float: left;
+  }
+  .header .name {
+    width: 50%;
+    font-size: 20px;
+  }
+  .header .size {
+    width: 50%;
+  }
+  .content {
+    flex-wrap: wrap;
+    padding: 30px;
+    align-items: center;
+    justify-items: center;
+    display: flex;
+  }
+  .content .card {
+    width: 100%;
+  }
+  .content .card .card-text {
+    width: 80%;
+    flex-direction: row;
+  }
+  .content .input {
+    width: 100%;
+  }
+  .content .shirt {
+    position: relative;
+    width: 80%;
+    margin-top: 40px;
+  }
+  .savdo {
+    padding: 30px;
+    flex-direction: column;
+    display: flex;
+  }
+  .savdo .title {
+    width: 100%;
+  }
+  .savdo .content {
+    justify-content: center;
+    flex-direction: row;
+  }
+  .savdo .content .b1,
+  .savdo .content .b2,
+  .savdo .content .b3,
+  .savdo .content .b4 {
+    width: 35%;
+    flex-direction: column;
+  }
+  .footer {
+    padding: 20px 30px;
+  }
+  .footer .content .blok {
+    width: 20%;
+  }
+  .footer .content .blok .title h2 {
+    font-size: 12px;
+  }
+  .footer .content .blok .title .contact a {
+    font-size: 8px;
+  }
+}
+@media (max-width: 576px) {
+  .nav {
+    padding: 15px;
+  }
+  .nav .logo {
+    width: 30%;
+    margin-right: 0;
+  }
+  .nav .logo .logo-title {
+    font-size: 8px;
+  }
+  .nav .navigator {
+    display: none;
+  }
+  .nav .search {
+    margin-left: 20px;
+    width: 150px;
+  }
+  .nav .search input {
+    width: 100%;
+  }
+  .nav .cart {
+    width: 150px;
+  }
+  .nav .btn {
+    display: block;
+    float: left;
+  }
+  .header {
+    padding: 20px;
+    flex-wrap: wrap;
+  }
+  .header .name {
+    width: 100%;
+    font-size: 14px;
+  }
+  .header .name a h2 {
+    font-size: 20px;
+  }
+  .header .name a h3 {
+    font-size: 16px;
+  }
+  .header .name a br {
+    display: none;
+  }
+  .header .size {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    position: relative;
+    display: flex;
+  }
+  .header .size .input {
+    position: relative;
+    width: 100%;
+  }
+  .content {
+    flex-wrap: wrap;
+    padding: 20px;
+    align-items: center;
+    justify-items: center;
+    display: flex;
+  }
+  .content .card {
+    width: 100%;
+  }
+  .content .card .card-text {
+    width: 80%;
+    flex-direction: row;
+  }
+  .content .input {
+    width: 100%;
+  }
+  .content .shirt {
+    width: 100%;
+    margin-top: 100px;
+    justify-content: start;
+    display: flex;
+  }
+  .content .shirt .title {
+    position: relative;
+    top: -70px;
+    left: -120px;
+  }
+  .savdo {
+    padding: 15px;
+    flex-direction: column;
+    display: flex;
+  }
+  .savdo .title {
+    width: 100%;
+  }
+  .savdo .content {
+    justify-content: center;
+    flex-direction: column;
+  }
+  .savdo .content .b1,
+  .savdo .content .b2,
+  .savdo .content .b3,
+  .savdo .content .b4 {
+    width: 100%;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+}
